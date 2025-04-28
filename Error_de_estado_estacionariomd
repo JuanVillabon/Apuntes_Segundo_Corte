@@ -1,1 +1,8 @@
+# Error de estado estacionario
 
+## Definicion de error estacionario  
+
+El error estacionario $$e_ss$$ se define como:
+$$
+e_{ss} = \lim_{t \to \infty} \left[ r(t) - y(t) \right]
+$$
