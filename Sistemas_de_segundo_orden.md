@@ -81,11 +81,40 @@ de la parte real y de la parte imaginaria.
 ![image](https://github.com/user-attachments/assets/d34e2ae5-47c3-4c6d-a05f-275822fae6d9)
 
 ## Ejemplos: Que tipo de respuesta se espera para cada sistema
-- 1. 
-- 2. 
-- 3.
+
+- 1. $G(s) = \frac{12}{s^{2}+8s+12}$
+
+$$ 2ζw_{n} = 8 $$
+
+${w_{n}}^{2} = 12$ ----> $w_{n} = \sqrt{12}$
+
+$$ \frac{8}{2\sqrt{12}} $$
+
+Resultado = 1.15 por lo que es sobreamortiguada
+
+- 2. $G(s) = \frac{16}{s^{2}+8s+16}$
+
+$$ 2ζw_{n} = 8 $$
+
+${w_{n}}^{2} = 16$ ----> $w_{n} = \sqrt{16}$
+
+$$ \frac{8}{2\sqrt{16}} $$
+
+Resultado = 1 por lo que es críticamente amortiguada
+
+- 3. $G(s) = \frac{20}{s^{2}+8s+20}$
+
+$$ 2ζw_{n} = 8 $$
+
+${w_{n}}^{2} = 20$ ----> $w_{n} = \sqrt{20}$
+
+$$ \frac{8}{2\sqrt{20}} $$
+
+Resultado = 0.89 por lo que es subamortiguada
 
 ## Ejercicios:
+
+  1. 
 
 ## Efecto de los ceros
 
