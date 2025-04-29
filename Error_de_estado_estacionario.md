@@ -55,3 +55,34 @@ Si desamos $e_ss \leq 0.05$, basta con resolver
 $$\frac{1}{1+\frac{K}{2}} \leq 0.05$$
 $$1+\frac{K}{2} \geq 20$$
 $$K \geq 38$$
+
+## Ejercicio  1
+Analisis de errores  en un sistema tipo 0
+
+Dado $G(s) = \frac{10}{s+2}$
+
+1. $e_ss$ para entrada escalon unitario
+
+$$K_p = \lim_{s \to 0} \frac{10}{s+2} = 5$$
+
+$$e_ss = \frac{1}{1+K_p} = \frac{1}{1+5}= \frac{1}{6}$$
+
+Error de posicon es de $\frac{1}{6}$
+
+2. $e_ss$ para entrada rampa unitario
+
+   $$\lim_{s \to 0} \frac{1}{s(\frac{10}{s+2})} = \infty$$
+
+3. $e_ss para  una entrada parabola unitario
+
+ $$\lim_{s \to 0} \frac{1}{s^2(\frac{10}{s+2})} = \infty$$   
+
+ ## Ejercicio 2
+ Diseño de ganancia para especificacion de error
+ *Considera $G(s) = \frac{K}{s(s+4)}$ con realimentacion unictaria. Determina el valor minimo de K neceario para que el error estacionario ante una rampa unitaria sea $\leq 0.02$
+
+$$ \lim_{s \to 0} \frac{1}{s(\frac{K}{s(s+4})} \leq 0.02 $$
+$$ \frac{4}{K} \leq 0.02$$
+$$K \geq 200$$
+   
+   
