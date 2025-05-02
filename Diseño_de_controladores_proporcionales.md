@@ -185,9 +185,9 @@ Por lo tanto la ganancia a la cual ocurre ese es:
 $$ K = \frac{1}{|G(s)||H(s)|} $$
 
 
-## Ejercicios
+# Ejercicios
 
-#### 1. Dada la función de transferencia calcular el vector resultante
+## 📚1. Dada la función de transferencia calcular el vector resultante
 
 $$ F(s) = \frac{(s+3)}{s(s+2)(s+5)} $$
 
@@ -223,7 +223,7 @@ $$ = 108.43° - 338.39° = -229.96° $$
 
 - 229.96°
 
-#### 2. Ejercicio: dado el siguiente sistema
+## 📚 2. Ejercicio: dado el siguiente sistema
 
 $$ G(s) = \frac{1}{s+5} $$
 
@@ -235,7 +235,7 @@ $$ G_{o}(s) = \frac{K_{p}}{s+5+K_{p}} $$
 
 $$ G_{o}(s) = \frac{K_{p}}{s+5+K_{p}} $$
 
-#### 3. Ejercicio: dado el siguiente sistema
+## 📚 3. Ejercicio: dado el siguiente sistema
 
 $$ G(s) = \frac{s+3}{s+4} $$
 
