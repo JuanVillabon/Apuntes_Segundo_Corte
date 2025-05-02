@@ -43,7 +43,7 @@ El factor de amortiguamiento ζ es un parámetro clave que describe cómo respon
 
 Dependiendo del valor de ζ, un sistema puede tener distintos tipos de comportamiento:
 
-### Sobre-amortiguado:
+### 1. Sobre-amortiguado:
 
 El sistema regresa lentamente al equilibrio sin oscilar.
 
@@ -55,7 +55,7 @@ Ubicación de polos: Los polos son reales y negativos, pero están separados. El
 
 ![image](https://github.com/user-attachments/assets/a5ca52e5-0f5c-4aba-93c7-b25d6cb15b00)
 
-### Críticamente amortiguado:
+### 2. Críticamente amortiguado:
 
 El sistema regresa al equilibrio lo más rápido posible sin oscilar.
 
@@ -67,7 +67,7 @@ Ubicación de polos: Los polos están ubicados en una posición real negativa, s
 
 ![image](https://github.com/user-attachments/assets/18a7a026-84f8-49a9-a92d-003318e26541)
 
-### Sub-amortiguado:
+### 3. Sub-amortiguado:
 
 El sistema oscila alrededor del equilibrio antes de estabilizarse.
 
@@ -82,7 +82,7 @@ de la parte real y de la parte imaginaria.
 
 ## Ejemplos: Que tipo de respuesta se espera para cada sistema
 
-- 1. $G(s) = \frac{12}{s^{2}+8s+12}$
+#### 1. $G(s) = \frac{12}{s^{2}+8s+12}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -92,7 +92,7 @@ $$ \frac{8}{2\sqrt{12}} $$
 
 Resultado = 1.15 por lo que es sobreamortiguada
 
-- 2. $G(s) = \frac{16}{s^{2}+8s+16}$
+#### 2. $G(s) = \frac{16}{s^{2}+8s+16}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -102,7 +102,7 @@ $$ \frac{8}{2\sqrt{16}} $$
 
 Resultado = 1 por lo que es críticamente amortiguada
 
-- 3. $G(s) = \frac{20}{s^{2}+8s+20}$
+#### 3. $G(s) = \frac{20}{s^{2}+8s+20}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -114,8 +114,50 @@ Resultado = 0.89 por lo que es subamortiguada
 
 ## Ejercicios:
 
-  1. 
+####  1. Ejercicio de Sistema de Segundo Orden: Se tiene una función de transferencia de un sistema de segundo orden dada por
 
+$$ G(s) = \frac{25}{s^2 + 6s + 25} $$
+
+- Obtenemos:
+
+$$ 2\zeta \omega_n = 6 $$
+
+$$  \quad \omega_n^2 = 25 \Rightarrow \omega_n = \sqrt{25} = 5 $$
+
+- Sustituyendo:
+  
+$$ 2\zeta \cdot 5 = 6 \Rightarrow \zeta = \frac{6}{10} = 0.6 $$
+
+- Resultado:
+
+- $\zeta = 0.6$
+
+- $w_{n} = 5$
+
+- Tipo de amortiguamiento: Subamortiguadao $\zeta < 1$
+
+### 2. Ejercicio: Dada la siguiente función de transferencia:
+
+$$ G(s) = \frac{100}{s^2 + 10s + 100} $$
+
+- Obtenemos:
+
+$$ 2\zeta \omega_n = 10 $$
+
+$$ \quad \omega_n^2 = 100 \Rightarrow \omega_n = \sqrt{100} = 10 $$
+
+- Sustituyendo:
+
+$$ 2\zeta \cdot 10 = 10 \Rightarrow \zeta = \frac{10}{20} = 0.5 $$
+
+- Resultados
+
+- $\zeta = 0.5$
+
+- $w_{n} = 10$
+
+- Tipo de amortiguamiento: Subamortiguado $\zeta < 1$
+  
 ## Efecto de los ceros
 
 Los ceros en un sistema de amortiguamiento son los valores de $s$ que hacen que el numerador de la función de transferencia se haga cero. Los ceros afectan la forma de la respuesta del sistema, pero no influyen directamente en el comportamiento del sistema a largo plazo (como los polos). Sin embargo, sí modifican el comportamiento transitorio y la frecuencia de resonancia en un sistema.
