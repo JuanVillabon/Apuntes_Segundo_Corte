@@ -56,7 +56,9 @@ $$\frac{1}{1+\frac{K}{2}} \leq 0.05$$
 $$1+\frac{K}{2} \geq 20$$
 $$K \geq 38$$
 
-## Ejercicio  1
+# Ejercios
+
+## 📚Ejercicio  1
 Analisis de errores  en un sistema tipo 0
 
 Dado $G(s) = \frac{10}{s+2}$
@@ -77,7 +79,7 @@ Error de posicon es de $\frac{1}{6}$
 
  $$\lim_{s \to 0} \frac{1}{s^2(\frac{10}{s+2})} = \infty$$   
 
- ## Ejercicio 2
+ ## 📚Ejercicio 2
  Diseño de ganancia para especificacion de error
  *Considera $G(s) = \frac{K}{s(s+4)}$ con realimentacion unictaria. Determina el valor minimo de K neceario para que el error estacionario ante una rampa unitaria sea $\leq 0.02$
 
