@@ -56,7 +56,7 @@ $$\frac{1}{1+\frac{K}{2}} \leq 0.05$$
 $$1+\frac{K}{2} \geq 20$$
 $$K \geq 38$$
 
-# Ejercios
+# Ejercicios
 
 ## 📚Ejercicio  1
 Analisis de errores  en un sistema tipo 0
