@@ -3,7 +3,7 @@
 - Alejandro Manrique Gonzalez
 - Juan Camilo Villabón Sepúlveda
 # Sistemas de segundo orden
-## ¿Que es?
+## 1. ¿Que es?
 Un sistema de segundo orden es aquel cuya función de transferencia presenta dos polos.
 Al igual que en los sistemas de primer orden, en cualquier sistema físico real, el número de ceros debe ser menor o igual al número de polos.
 Por esta razón, los sistemas de segundo orden pueden tener hasta dos ceros como máximo. Estos sistemas son muy comunes en el análisis y diseño de controladores, ya que modelan muchos fenómenos naturales como vibraciones mecánicas, circuitos eléctricos RLC, o movimientos de sistemas amortiguados.
@@ -16,7 +16,7 @@ $$ \ddot{y}(t) + a_{1}\dot{y}(t) + a_{0}y(t) = b_{0}u(t) $$
 
 $$ \frac{Y(s)}{U(s)} = \frac{b_{0}}{s^{2}+a_{1}s+a_{0}} $$
 
-## Forma canónica
+## 2. Forma canónica
 
 La forma canónica de un sistema de segundo orden es una manera estándar de escribir la función de transferencia, resaltando los parámetros más importantes para analizar la estabilidad y la respuesta del sistema.
 Cuando se usa la forma canónica en un sistema de segundo orden, se establecen relaciones específicas entre los coeficientes del denominador y numerador de la función de transferencia.
@@ -37,13 +37,13 @@ Donde:
 - $w_{n}$ es la frecuencia natural del sistema
 - $ζ$ es el factor de amortiguamiento del sistema
 
-## Factor de amortiguamiento 
+## 3.  Factor de amortiguamiento 
 
 El factor de amortiguamiento ζ es un parámetro clave que describe cómo responde un sistema a cambios o perturbaciones. Indica cuánto se disipa la energía en el sistema y afecta directamente la forma de la respuesta.
 
 Dependiendo del valor de ζ, un sistema puede tener distintos tipos de comportamiento:
 
-### 1. Sobre-amortiguado:
+### 3.1. Sobre-amortiguado:
 
 El sistema regresa lentamente al equilibrio sin oscilar.
 
@@ -51,11 +51,15 @@ $$ ζ > 1 $$
 
 ![image](https://github.com/user-attachments/assets/9e6d70f8-d6e4-4e13-a676-2fef3963eb96)
 
+Figura 1: Representancion grafica de un sistema sobre-amortiguado
+
 Ubicación de polos: Los polos son reales y negativos, pero están separados. El sistema no oscila, pero su respuesta a una perturbación es más lenta en comparación con el amortiguamiento crítico.
 
 ![image](https://github.com/user-attachments/assets/a5ca52e5-0f5c-4aba-93c7-b25d6cb15b00)
 
-### 2. Críticamente amortiguado:
+Figura 2: Ubicacion de los polos de un sistema sobre-amortiguado
+
+### 3.2. Críticamente amortiguado:
 
 El sistema regresa al equilibrio lo más rápido posible sin oscilar.
 
@@ -63,11 +67,15 @@ $$ ζ = 1 $$
 
 ![image](https://github.com/user-attachments/assets/9a695c98-6d31-41dd-970e-dd34e4e6bd42)
 
+Figura 3:Representacion grafica de un sistema criticamente amortiguado
+
 Ubicación de polos: Los polos están ubicados en una posición real negativa, simétricamente, en el plano complejo. En este caso, el sistema no tiene oscilaciones y se estabiliza lo más rápido posible.
 
 ![image](https://github.com/user-attachments/assets/18a7a026-84f8-49a9-a92d-003318e26541)
 
-### 3. Sub-amortiguado:
+Figura 4: Ubicacion  de los polos de un sistema criticamente amortiguado
+
+### 3.3. Sub-amortiguado:
 
 El sistema oscila alrededor del equilibrio antes de estabilizarse.
 
@@ -75,14 +83,18 @@ $$ ζ < 1 $$
 
 ![image](https://github.com/user-attachments/assets/e34d7366-27c7-4846-80a1-bfd1ae978981)
 
+Figura 5: Representacion grafica de un sistema sub-amortiguado
+
 Ubicación de polos: Los polos están ubicados en el plano complejo, a una distancia 
 de la parte real y de la parte imaginaria.
 
 ![image](https://github.com/user-attachments/assets/d34e2ae5-47c3-4c6d-a05f-275822fae6d9)
 
+Figura 6 ubicacion de los polos de un sistema sub-amortiguado
+
 ## Ejemplos: Que tipo de respuesta se espera para cada sistema
 
-#### 1. $G(s) = \frac{12}{s^{2}+8s+12}$
+#### 💡 1. $G(s) = \frac{12}{s^{2}+8s+12}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -92,7 +104,7 @@ $$ \frac{8}{2\sqrt{12}} $$
 
 Resultado = 1.15 por lo que es sobreamortiguada
 
-#### 2. $G(s) = \frac{16}{s^{2}+8s+16}$
+#### 💡2. $G(s) = \frac{16}{s^{2}+8s+16}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -102,7 +114,7 @@ $$ \frac{8}{2\sqrt{16}} $$
 
 Resultado = 1 por lo que es críticamente amortiguada
 
-#### 3. $G(s) = \frac{20}{s^{2}+8s+20}$
+#### 💡3. $G(s) = \frac{20}{s^{2}+8s+20}$
 
 $$ 2ζw_{n} = 8 $$
 
@@ -112,9 +124,9 @@ $$ \frac{8}{2\sqrt{20}} $$
 
 Resultado = 0.89 por lo que es subamortiguada
 
-## Ejercicios:
+# Ejercicios:
 
-####  1. Ejercicio de Sistema de Segundo Orden: Se tiene una función de transferencia de un sistema de segundo orden dada por
+##  📚1. Ejercicio de Sistema de Segundo Orden: Se tiene una función de transferencia de un sistema de segundo orden dada por
 
 $$ G(s) = \frac{25}{s^2 + 6s + 25} $$
 
@@ -136,7 +148,7 @@ $$ 2\zeta \cdot 5 = 6 \Rightarrow \zeta = \frac{6}{10} = 0.6 $$
 
 - Tipo de amortiguamiento: Subamortiguadao $\zeta < 1$
 
-### 2. Ejercicio: Dada la siguiente función de transferencia:
+## 📚2. Ejercicio: Dada la siguiente función de transferencia:
 
 $$ G(s) = \frac{100}{s^2 + 10s + 100} $$
 
@@ -158,7 +170,7 @@ $$ 2\zeta \cdot 10 = 10 \Rightarrow \zeta = \frac{10}{20} = 0.5 $$
 
 - Tipo de amortiguamiento: Subamortiguado $\zeta < 1$
   
-## Efecto de los ceros
+## 4. Efecto de los ceros
 
 Los ceros en un sistema de amortiguamiento son los valores de $s$ que hacen que el numerador de la función de transferencia se haga cero. Los ceros afectan la forma de la respuesta del sistema, pero no influyen directamente en el comportamiento del sistema a largo plazo (como los polos). Sin embargo, sí modifican el comportamiento transitorio y la frecuencia de resonancia en un sistema.
 
@@ -166,7 +178,9 @@ Los ceros en un sistema de amortiguamiento son los valores de $s$ que hacen que 
 
 ![image](https://github.com/user-attachments/assets/6243b2b6-f174-4153-a00d-e737892ef493)
 
-## Sistemas de orden superior
+Figura 7: Diferencia de respuesta segun los zeros
+
+## 5. Sistemas de orden superior
 
 Un sistema de orden superior tiene más de dos polos. Esto hace que la ecuación característica que describe al sistema sea de grado mayor a dos. Como resultado, el comportamiento del sistema involucra más modos, y la respuesta será más compleja.
 Los sistemas de orden superior pueden descomponerse en sub-sistemas de primer o segundo orden. Esto significa que, aunque el sistema global sea de orden mayor, se puede analizar separadamente en modos que se comportan como sistemas de segundo orden o incluso de primer orden.
