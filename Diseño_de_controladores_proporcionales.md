@@ -100,7 +100,7 @@ $$ \frac{y}{R} = \frac{GC}{(1 + GC)} $$
 
 ### Ejemplo 
 
-  1. Lazo Abierto
+####  1. Lazo Abierto
 
 $$ G(s) = \frac{0,25}{s + 2} $$
 
@@ -112,7 +112,7 @@ B. $T$ = $\frac{1}{2} Seg$ = 0,5 Seg
 - Entonces:
 - $t_{s} = 4 * 0,5 Seg$ = 2 Seg
 
-  2. Lazo Cerrado
+####  2. Lazo Cerrado
 
 $$ G(s) = \frac{0,25}{s + 2} $$
 
@@ -122,5 +122,116 @@ $$ = \frac{K_{p}\frac{0,25}{s + 2}}{1 + K_{p}\frac{0,25}{s + 2}} $$
 
 $$ G_{0}(s) = \frac{y}{R} = \frac{0,25K_{p}}{s + 2 + 0,25K_{p}} $$
 
+####  3. Función de transferencia en lazo cerrado en su forma canónica
 
+$$ G_{o}(s) = \frac{y}{R} = \frac{0.25K_{p}}{s+2+0.25K_{p}} $$
+
+$$ G_{o}(s) = \frac{\frac{0.25K_{p}}{2+0.25K_{p}}}{\frac{0.25K_{p}}{2+0.25K_{p}}+1} $$
+
+$$ t = \frac{1}{2+0.25K_{p}} $$
+
+$$ t´_{s} = 4 * t = \frac{4}{2+0.25K_{p}} $$
+
+$$ t´_{s} = \frac{4}{2+0.25K_{p}} = 1 $$
+
+$$ 4 = 2 + 0.25K_{p} $$
+
+$$ K_{p} = \frac{4 - 2}{0.25} = 8 $$
+
+## Lugar geométrico de las raíces
+
+El lugar geométrico de las raíces es una herramienta gráfica utilizada en el análisis y diseño de sistemas de control, que muestra cómo cambian las raíces de la ecuación característica del sistema en lazo cerrado (es decir, los polos del sistema en lazo cerrado), a medida que varía un parámetro del sistema, usualmente la ganancia $K$.
+
+### Para que sirve
+
+- Analizar la estabilidad del sistema.
+
+- Diseñar controladores (como PID) ajustando la ganancia o agregando polos/ceros.
+
+- Visualizar cómo se mueven los polos del sistema a medida que se modifica la ganancia.
  
+### Propiedades
+
+![image](https://github.com/user-attachments/assets/9a634f43-86fc-4a60-af68-faeb5ffa3bf8)
+
+$$ T(s) = \frac{KG(s)}{1 + KG(s)H(s)} $$
+
+Los polo se encuentran cuando:
+
+$$ KG(s)H(s) = -1 = 1<(2k + 1)180°    K = 0,+-1.+-2.+-3,... $$
+
+Magnitud
+
+$$ |KG(s)H(s)| = 1 $$
+
+Angulo
+
+$$ <KG(s)H(s) = (2k + 1)180° $$
+
+Por lo tanto la ganancia a la cual ocurre ese es:
+
+$$ K = \frac{1}{|G(s)||H(s)|} $$
+
+
+## Ejercicios
+
+#### 1. Dada la función de transferencia calcular el vector resultante
+
+$$ F(s) = \frac{(s+3)}{s(s+2)(s+5)} $$
+
+Angulo neto con respecto al punto $S_{0} = -4+j3$
+
+- Cero: $s = -3$
+
+- Polos: $s = 0, s = -2, s = -5$
+
+- Vectores:
+
+A. $S_{0} - (-3) = -1 + j3$
+
+$$ tan^{-1} (\frac{3}{-1}) = 108.43° $$
+
+B. $S_{0} - 0 = -4 + j3$
+
+$$ tan^{-1} (\frac{3}{-4}) = 143.13° $$
+
+C. $S_{0} - (-5) = 1 + j3$
+
+$$ tan^{-1} (\frac{3}{1}) = 71.57° $$
+
+- Angulo neto
+
+$$ <F(s_{0} = θ_{z} - (θ_{p1} + θ_{p2} + θ_{p3}) $$
+
+$$ = 108.43° - (143.13° + 123.69° + 71.57°) $$
+
+$$ = 108.43° - 338.39° = -229.96° $$
+
+- Resultado:
+
+- 229.96°
+
+#### 2. Ejercicio: dado el siguiente sistema
+
+$$ G(s) = \frac{1}{s+5} $$
+
+$$ G_{o}(s) = \frac{K_{p} * \frac{1}{s+5}}{1 + K_{p} * \frac{1}{s+5}} $$
+
+$$ G_{o}(s) = \frac{K_{p}}{s+5+K_{p}} $$
+
+- Resultado:
+
+$$ G_{o}(s) = \frac{K_{p}}{s+5+K_{p}} $$
+
+#### 3. Ejercicio: dado el siguiente sistema
+
+$$ G(s) = \frac{s+3}{s+4} $$
+
+$$ G_{o}(s) = \frac{K_{p} * \frac{s+3}{s+5
+4}}{1 + K_{p} * \frac{s+3}{s+4}} $$
+
+$$ G_{o}(s) = \frac{K_{p}(s+3)}{s+4+K_{p}(s+3)} $$
+
+- Resultado:
+
+$$ G_{o}(s) = \frac{K_{p}(s+3)}{s+4+K_{p}(s+3)} $$
