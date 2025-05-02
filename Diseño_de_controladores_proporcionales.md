@@ -1,11 +1,13 @@
 # Diseño de controladores proporcionales
-## ¿Como controlar estos sistemas?
+ ## 1. ¿Como controlar estos sistemas?
 
 Para poder controlar estos sistemas sed debe saber que queremos lograr con la variable que se quire controlar, Comparar la varaiable que se quiere contolar con el valor deseado de las misma, a partir de resultado de la comparacion se toma una decision.
 
-## Componentes de un sistema de control
+## 2. Componentes de un sistema de control
 
 ![image](https://github.com/user-attachments/assets/039b3340-8b24-4759-9d4d-a6ec7b7cde26)
+
+Figura 1. Diagrama de un sistema en lazo cerrado
 
 - Comparador: Compara la señal de referencia (setpoint) con la salida medida del sistema (señal real).
 
@@ -19,11 +21,13 @@ Para poder controlar estos sistemas sed debe saber que queremos lograr con la va
 
 - Retroalimentación: La retroalimentación es la señal que se envía de vuelta desde el sensor al comparador y controlador. Esto permite al sistema ajustar su comportamiento en función de la diferencia entre la salida real y la referencia.
 
-## Lazo Cerrado
+## 3. Lazo Cerrado
 
 Los sistemas de control de lazo cerrado son ampliamente utilizados en la variedad de industrias para regular y controlar procesos automatizados. Tambien es conocido como sistema de control realimentacion, utiliza una señal de retroalimentacion para comparar el resusltado deseado con el resultado actual y ajustar el proceso en consecuencia, permitiendo una mayor precision y estabilidad en comparacion con los sistemas de lazo abierto.
 
 ![image](https://github.com/user-attachments/assets/f11fee7a-452d-4064-b02e-3d4649f418d0)
+
+Figura 2: Diagrama de lazo cerrado con un controlador 
 
 Este valor deseado se conoce como el Setpoint y sera el unico valor modificado en el sistema. La funcion de transferencia es esencial para analizar como se comporta el sistema ante diferentes entradas y perturbaciones. Para una comparacion profunda de como se determina y utiliza la funcin de transferencia en sistema de control.
 
@@ -41,7 +45,7 @@ Este valor deseado se conoce como el Setpoint y sera el unico valor modificado e
 
 2. Desempeño limitado con controladores proporcionales: Un controlador proporcional puede no eliminar el error completamente en sistemas de lazo cerrado (a menos que se agregue integral o derivativo).
 
-## Control ON-OFF
+## 4. Control ON-OFF
 
 Este tipo de controlador, tambien llamado Todo o Nada, usa un algoritmo simple para solamente revisa la variable del proceso esta por encima o por debajo de un setpoint determinado.
 
@@ -49,10 +53,12 @@ En terminos practico, la variable manipuladad o la señal de control cambia entr
 
 ![image](https://github.com/user-attachments/assets/b771b5ff-596a-41df-b832-618541fda12c)
 
+Figura 3: Representacion de funcionamiento de control ON_OFF
+
 Si el error es mayor que un umbral predefinido, el sistema se activa (ON). Si el error es menor que otro umbral (generalmente más pequeño), el sistema se desactiva (OFF).
 Típicamente en sistemas con un comportamiento binario, como control de temperatura en hornos o calentadores, Puede generar oscilaciones o inestabilidad debido al cambio abrupto entre los estados ON y OFF, y el sistema no puede mantener un valor de referencia preciso.
 
-## Controlador proporcional
+## 5. Controlador proporcional
 
 Es la forma mas simple de control continuo que se puede utilizar en un sistema de lazo cerrado que corrigue el error entre una señal deseada y la señal real, aplicando una accion proporcional a ese error.
 
@@ -60,6 +66,8 @@ Un controlador proporcional es un dispositivo que ajusta su salida en proporció
 El error e(t) es la diferencia entre el valor deseado (referencia o setpoint) y el valor actual medido de la salida del sistema.
 
 ![image](https://github.com/user-attachments/assets/5460f7ee-3094-479a-9e3d-fa7e9cb0b11e)
+
+Figura 4: Representacion de control Proporcional 
 
 - Se representa de la siguiente manera:
 
@@ -81,9 +89,11 @@ Donde:
   1. Ganancia baja: respuesta lenta y error grande.
   2. Ganancia alta: respuesta rápida, pero puede causar sobresalto, oscilaciones o incluso inestabilidad si es muy alta.
  
-## Función de trasnferecia de un sistema de lazo cerrado
+## 6. Función de trasnferecia de un sistema de lazo cerrado
 
 ![image](https://github.com/user-attachments/assets/c464c871-ed22-40b1-8d6f-11062373f03e)
+
+Figura 5: Lazo cerrado con control proporcional 
 
 1. $E = R - y$
 2. $U = EC$
@@ -100,7 +110,7 @@ $$ \frac{y}{R} = \frac{GC}{(1 + GC)} $$
 
 ### Ejemplo 
 
-####  1. Lazo Abierto
+#### 💡1. Lazo Abierto
 
 $$ G(s) = \frac{0,25}{s + 2} $$
 
@@ -112,7 +122,7 @@ B. $T$ = $\frac{1}{2} Seg$ = 0,5 Seg
 - Entonces:
 - $t_{s} = 4 * 0,5 Seg$ = 2 Seg
 
-####  2. Lazo Cerrado
+####  💡2. Lazo Cerrado
 
 $$ G(s) = \frac{0,25}{s + 2} $$
 
@@ -122,7 +132,7 @@ $$ = \frac{K_{p}\frac{0,25}{s + 2}}{1 + K_{p}\frac{0,25}{s + 2}} $$
 
 $$ G_{0}(s) = \frac{y}{R} = \frac{0,25K_{p}}{s + 2 + 0,25K_{p}} $$
 
-####  3. Función de transferencia en lazo cerrado en su forma canónica
+#### 💡3. Función de transferencia en lazo cerrado en su forma canónica
 
 $$ G_{o}(s) = \frac{y}{R} = \frac{0.25K_{p}}{s+2+0.25K_{p}} $$
 
@@ -138,11 +148,11 @@ $$ 4 = 2 + 0.25K_{p} $$
 
 $$ K_{p} = \frac{4 - 2}{0.25} = 8 $$
 
-## Lugar geométrico de las raíces
+## 7. Lugar geométrico de las raíces
 
 El lugar geométrico de las raíces es una herramienta gráfica utilizada en el análisis y diseño de sistemas de control, que muestra cómo cambian las raíces de la ecuación característica del sistema en lazo cerrado (es decir, los polos del sistema en lazo cerrado), a medida que varía un parámetro del sistema, usualmente la ganancia $K$.
 
-### Para que sirve
+### 7.1 Para que sirve
 
 - Analizar la estabilidad del sistema.
 
@@ -150,9 +160,11 @@ El lugar geométrico de las raíces es una herramienta gráfica utilizada en el 
 
 - Visualizar cómo se mueven los polos del sistema a medida que se modifica la ganancia.
  
-### Propiedades
+### 7.2 Propiedades
 
 ![image](https://github.com/user-attachments/assets/9a634f43-86fc-4a60-af68-faeb5ffa3bf8)
+
+Figura 6: Analisis del lugar geometrioco de las raices 
 
 $$ T(s) = \frac{KG(s)}{1 + KG(s)H(s)} $$
 
